@@ -6,6 +6,10 @@
     <!--    this is required when you want to both support devices under API 19 and still integrate Unity ads (which declares minimum API as 19)
     more information in FairBid's dev portal: https://developer.fyber.com/hc/en-us/articles/360010172138-Unity-Ads-->
     <uses-sdk tools:overrideLibrary="com.unity3d.ads, com.snap.adkit.distribution" />
+
+    <!-- Pangle -->
+    <!-- If there is a video ad and it is played with textureView, please be sure to add this, otherwise a black screen will appear -->
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"

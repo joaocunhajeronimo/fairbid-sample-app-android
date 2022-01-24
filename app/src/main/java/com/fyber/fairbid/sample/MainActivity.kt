@@ -22,6 +22,7 @@ import android.os.Handler
 import android.os.Looper
 import androidx.appcompat.app.AppCompatActivity
 import com.fyber.FairBid
+import com.fyber.fairbid.user.UserInfo
 import com.fyber.fairbid.utilities.MainFragment
 import com.fyber.fairbid.utilities.SplashScreenFragment
 
@@ -38,7 +39,7 @@ class MainActivity : MainFragment.FragmentListener, AppCompatActivity() {
          * "109613" can be used a sample application.
          * TODO replace with your own app id.
          */
-        private const val PUBLISHERS_APP_ID = "109613"
+        private const val PUBLISHERS_APP_ID = "110073"
     }
 
 
@@ -61,7 +62,11 @@ class MainActivity : MainFragment.FragmentListener, AppCompatActivity() {
      * @param appId The app id provided through the Fyber console
      */
     private fun startFairBidSdk(appId: String) {
+//      WARNING: this is here just for testing purposes to increase chances of Pangle fills.
+//        consent should never be given without user interaction.
+        UserInfo.setGdprConsent(true, this)
         val fairBid = FairBid.configureForAppId(appId).enableLogs()
+
         fairBid.start(this)
     }
 

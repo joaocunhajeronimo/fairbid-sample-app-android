@@ -62,4 +62,6 @@ dependencies {
 
     // necessary when including several mediated networks
     implementation 'androidx.multidex:multidex:2.0.1'
+
+    implementation("com.pangle.global:ads-sdk:4.1.1.7")
 }

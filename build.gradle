@@ -18,6 +18,14 @@ allprojects {
     repositories {
         mavenCentral()
         google()
+
+        maven {
+            name = "Pangle's maven repo"
+            url = uri("https://artifact.bytedance.com/repository/pangle")
+            content {
+                includeGroup("com.pangle.global")
+            }
+        }
     }
 }
 
